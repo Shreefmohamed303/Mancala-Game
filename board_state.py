@@ -15,7 +15,7 @@ class Board:
 
     def getLimit(self,player):
         return(self.PITS + 1) * player
-    
+    # this function evaluate diffrence between two stores of each player to use it in showing the winner
     def evaluation(self, player):
         limit1 = self.getLimit(player)
         limit2 = self.getLimit(1-player)
@@ -62,8 +62,9 @@ class Board:
         # In this case the player gets another turn
         if (move_index == self.PITS + limit):
             return True
+        # Stealing or without stealing mode if mode is 1 so the user choosed the stealing mode  
         if(mode):
-            # Stealing Condition Satsified
+
             # Check if last stone landed in player's empty bin and opposite player's bin has at least one stone
             # In this case all the stones in the opponent's bins go to the player's store
             if (move_index < (self.PITS + limit) and move_index >= limit and self.mancala_board[move_index] == 1 and self.mancala_board[self.TOTAL_PITS - move_index] > 0):
