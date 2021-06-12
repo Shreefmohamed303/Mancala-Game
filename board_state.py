@@ -12,10 +12,14 @@ class Board:
         self.PLAYER2 = 1
         self.mancala_board = [4, 4, 4, 4, 4, 4, 0,
                               4, 4, 4, 4, 4, 4, 0]
-
+    #Function getLimit :return number indicate index of starting PIT according to current player
+    #Parameters:
+    #1-player: current player
     def getLimit(self,player):
         return(self.PITS + 1) * player
-    # this function evaluate diffrence between two stores of each player to use it in showing the winner
+    #Function: evaluate diffrence between two stores of each player to use it in showing the winner
+    #Parameters:
+    #1-player: current player
     def evaluation(self, player):
         limit1 = self.getLimit(player)
         limit2 = self.getLimit(1-player)
@@ -32,8 +36,9 @@ class Board:
 
         return result
 
-
-    # return a list of indeces of non empty pits
+    #Function:  return a list of indeces of non empty pits
+    #Parameters:
+    #1-player: current player
     def getFilledPitsIndex(self, player):
         moves = []
         limit = 7 * player
@@ -41,8 +46,11 @@ class Board:
             if(self.mancala_board[i+limit]):
                 moves.append(i)
         return moves
-
-    # Actual Move of Stones
+    #Function: Actual move of stones from choosed PIT to adjecent PIT
+    #Parameters:
+    #1-player:current player
+    #2-Move:index of choosed PIT to move stones from it
+    #3-mode: stealing(1) or without stealing(0) modes
     def Move(self, move, player,mode):
         limit = self.getLimit(player) #0
         move_index = move + limit
@@ -74,7 +82,7 @@ class Board:
                 self.mancala_board[self.TOTAL_PITS - move_index] = self.mancala_board[move_index] = 0
         return False
 
-
+    #Function : calculate score from both player's stores to reveal the game result
     def getScore(self, expectedPlayer):
         limit = self.getLimit(expectedPlayer)
         for i in range(self.PITS):
@@ -88,12 +96,12 @@ class Board:
         else:
             return abs(diff), 2 #DRAW
 
-    # The game is over when one player’s pits are completely empty.
+    #Function:Checks if The game is over when one player’s pits are completely empty.
     def isGameOver(self):
         if (any(self.mancala_board[0:6]) != 0 and any(self.mancala_board[7:13]) != 0):
             return False
         return True
-
+    #Function: responsible for printing the game board
     def print_board(self):
         table = Table()
 
