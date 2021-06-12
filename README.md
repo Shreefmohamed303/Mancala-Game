@@ -1,5 +1,8 @@
 # Mancala-Game
 
+# Youtube video:
+https://youtu.be/lULceFbvoPg
+
 # Libraries Needed:
 rich library -->  pip install rich
 
