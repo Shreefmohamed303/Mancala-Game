@@ -6,7 +6,14 @@ class Algorithm:
     def __init__(self):
         self.infinity = 300
 
-    # Calculate Max Value
+    #Function Calculate Max Value
+    #parameters:
+    #1-board_state: object of BOARD class
+    #2-player:Current player
+    #3-depth:chosen depth
+    #4-alpha:
+    #5-beta:
+    #6-mode:chosen mode (stealing or without stealing)
     def calcMaxValue(self, board_state, player, depth, alpha, beta,mode):
 
         # check if the game is over or not
@@ -49,7 +56,14 @@ class Algorithm:
 
         return maxValue
 
-    # Calculate Min Value
+    #Function Calculate MIN Value
+    #parameters:
+    #1-board_state: object of BOARD class
+    #2-player:Current player
+    #3-depth:chosen depth
+    #4-alpha:
+    #5-beta:
+    #6-mode:chosen mode (stealing or without stealing)
     def calcMinValue(self, board_state, player, depth, alpha, beta,mode):
 
         # check if the game is over or not
@@ -93,7 +107,12 @@ class Algorithm:
 
         return minValue
 
-    # AlphaBeta algorithm
+    # Function:  apply AlphaBeta algorithm using recursion
+    #Parameters:
+    #1-state:object of BOARD class
+    #2-player:Current player
+    #3-depth:chosen depth
+    #4-mode:chosen mode (stealing or without stealing)
     def alphabetaAlgorithm(self, state, player, depth,mode):
 
         # get indix of All Filled PITS 
