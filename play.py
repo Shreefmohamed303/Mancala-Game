@@ -14,7 +14,13 @@ class Game:
         self.ALPHABETA = 1
         self.PLAYER1 = 0
         self.PLAYER2 = 1
-
+    #Function : -set depth according to difficulity,-make moves of stones on board either by human or algorithm ,-Check if game is terminated
+    #Parameters : 
+    #1-playerStrategy:defines the human and algorithm strategy
+    #2-player: player whose turn is now
+    #3-board: created object of BOARD calss
+    #4-Difficulity: choosen difficulity of the game by th user ( for Easy ---> difficulity=1 ,for AMATURE ---> difficulity=2,fro WORLDCLASS --> difficulity=3)
+    #5-Mode: choosen mode by user 1--> stealing(mode=true) 2--->without stealing(mode=false)
     def play(self, playerStrategy, player, board,Difficulity,mode):
         pit_to_move= int()
         freeMove = True
@@ -59,8 +65,13 @@ class Game:
             if(freeMove):
                 print("player   ", player + 1, " gets another move")
                 board.print_board()
-
-    def start(self, playerStrategy1, playerStrategy2,player,Difficulity,mode):
+     #Function containing game loop 
+     #Parameters : 
+     #1-playerstrategy:defines the human and algorithm strategy
+     #2-player: defines which player the user selected to play first
+     #3-Difficulity: choosen difficulity of the game by th user
+     #4-Mode: choosen mode by user 1--> stealing(mode=true) 2--->without stealing(mode=false)
+    def  start(self,playerStrategy1,playerStrategy2,player,Difficulity,mode):
         board = Board()
         gameOver = False
 
