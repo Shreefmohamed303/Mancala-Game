@@ -48,7 +48,7 @@ class Game:
                     if(pit_to_move in actions):
                         break
                     else:
-                        print("You Entered Empty PIT Number to Move !")
+                        print("You Entered Empty PIT Number to Move or illegal move !")
             elif(playerStrategy == self.ALPHABETA):
                 print("Alphabeta Running.........")
                 search = Algorithm()
