@@ -1,6 +1,6 @@
 from play import Game, HUMAN, ALPHABETA,PLAYER1, PLAYER2
 
-print("choose Difficulity :\n1-EASY\n2-AMATURE\n3-WORLDCLASS\n")
+print("choose Difficulity :\n1-EASY\n2-MEDUIM\n3-WORLDCLASS\n")
 Difficulity = int(input())
 
 print("choose desired mode: \n1-with stealing\n2-without stealing")
