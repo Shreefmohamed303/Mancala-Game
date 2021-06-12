@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/shreef/Downloads/Compressed/Assignment2-20210516T202107Z-001/Assignment2",
+  "password": false,
+  "pid": 22572,
+  "port": 8888,
+  "secure": false,
+  "sock": "",
+  "token": "86e7a892fd85f8baf437cdda6ba3d93530ca64a3b4b4f1ec",
+  "url": "http://localhost:8888/"
+}

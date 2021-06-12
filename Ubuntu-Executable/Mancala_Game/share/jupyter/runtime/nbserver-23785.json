@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/shreef/Documents/4-CSE/Image-Processing/mo2oo",
+  "password": false,
+  "pid": 23785,
+  "port": 8888,
+  "secure": false,
+  "sock": "",
+  "token": "776e3438cc28773047b2951c357a2691abfc1076eded1eb4",
+  "url": "http://localhost:8888/"
+}

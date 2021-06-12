@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/shreef/Downloads",
+  "password": false,
+  "pid": 23500,
+  "port": 8889,
+  "secure": false,
+  "sock": "",
+  "token": "3dfb00ebd33cc0dd89faebfe47027968145ae364076b42d6",
+  "url": "http://localhost:8889/"
+}

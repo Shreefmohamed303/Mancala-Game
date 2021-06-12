@@ -1,0 +1,12 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "notebook_dir": "/home/shreef/Documents/4-CSE/Image-Processing/Assignment1",
+  "password": false,
+  "pid": 12889,
+  "port": 8888,
+  "secure": false,
+  "sock": "",
+  "token": "85a33bf42323da20c65bd29537adfdbf36cc60f94a01a605",
+  "url": "http://localhost:8888/"
+}
